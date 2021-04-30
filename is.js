@@ -4,7 +4,7 @@ const btn = document.getElementById('go');
 function create(name){
         var ID = '_' + Math.random().toString(36).substr(2, 9);
         localStorage.setItem(name, JSON.stringify(ID))
-        h1.textContent = ID
+        h1.style.content = ID
 }
 
 btn.addEventListener('click', function(){
