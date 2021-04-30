@@ -1,8 +1,12 @@
-import uuid4 from "uuid4";
+const h1 = document.getElementById('ID');
+const btn = document.getElementById('go');
 
-class id{
-    v4(){
-        var id = uuid4();
-        uuid4.valid(id)
-    }
+function create(name){
+        var ID = '_' + Math.random().toString(36).substr(2, 9);
+        localStorage.setItem(name, JSON.stringify(ID))
+        h1.textContent = ID
 }
+
+btn.addEventListener('click', function(){
+ create("test");
+})
